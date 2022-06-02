@@ -53,8 +53,8 @@ __start:
 	syscall
 
 #Calculations
-    div  $t4, $t0, $t1
-    mfhi $t5
+    div  $t4, $t0, $t1 #quotient in t4
+    mfhi $t5 #remainder in $t5
 #Output
     la $a0,quotient
     li $v0,4
