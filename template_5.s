@@ -21,6 +21,3 @@ __start:
 
 Exit:				li 		$v0, 10
 					syscall				#au revoir...
-
-
-
