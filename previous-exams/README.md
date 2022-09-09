@@ -1,1 +1,1 @@
-Hey efi wtf!
+Hey!
