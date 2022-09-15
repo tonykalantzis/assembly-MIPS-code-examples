@@ -1,15 +1,15 @@
 #################################################
-#			 									#
-#     	 	      data segment				    #
-#												#
+#						#
+#     	 	 data segment			#
+#						#
 #################################################
 
 	.data
 endl: 	.asciiz 	"\n"
 #################################################
-#												#
-#				  text segment					#
-#												#
+#						#
+#		text segment			#
+#						#
 #################################################
 	.text
 	.globl __start	
@@ -22,10 +22,10 @@ Exit:   		li 	$v0, 10
 #-------------end of main program--------------#
 
 #-------------start of procedures--------------#
-print_endl:			la	$a0,endl 			 
-					li	$v0, 4 	#system call to print
-					syscall
-					jr $ra
+print_endl:	la	$a0,endl 			 
+		li	$v0, 4 	#system call to print
+		syscall
+		jr $ra
 
 #-------------end of procedures---------------#
 
