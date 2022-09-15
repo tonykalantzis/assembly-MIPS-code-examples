@@ -28,3 +28,8 @@ print_float_from_reg:	mov.s	$f12, $f0			# ???  --> FP register with float
 
 Exit:				li 		$v0, 10
 					syscall				#au revoir...
+#################################################
+#                                               #
+#               End of program                  #
+#                                               #
+#################################################

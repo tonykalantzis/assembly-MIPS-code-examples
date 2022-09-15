@@ -7,7 +7,7 @@
 	.data
 dividend: .asciiz "Enter dividend: "
 divisor: .asciiz "Enter divisor: "
-endl: 					.asciiz 	"\n"
+endl: 	.asciiz 	"\n"
 quotient: .asciiz "quotient is: "
 remainder: .asciiz "remainder is: "
 

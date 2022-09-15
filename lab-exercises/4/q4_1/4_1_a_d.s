@@ -1,17 +1,31 @@
 #################################################
-# #
-# lab4_1a.s #
-# stack exercise 1 (to be completed) #
-# #
+#                                               #
+#                  lab4_1a.s                    #
+#      stack exercise 1 (to be completed)       #
+#                                               #
+#################################################
+#################################################
+#		        			#
+#     	          data segment		     	#
+#						#
+#################################################
+.data
+max: .asciiz "Max is : "
+min: .asciiz "Min is : "
+endl: .asciiz "\n"
+#################################################
+#						#
+#               text segment			#
+#       					#
 #################################################
  .text
  .globl __start
 __start:
 # start of main program
  li $a0,-10 # Initialize variables
- li $a1,-30 #
- li $a2,120 #
- li $a3,200 #
+ li $a1,-30 
+ li $a2,120 
+ li $a3,200 
  
  jal minmax
 
@@ -75,12 +89,9 @@ resMax: move $v1,$s1
 
         jr $ra
 # end of procedure
- .data
-max: .asciiz "Max is : "
-min: .asciiz "Min is : "
-endl: .asciiz "\n"
+ 
 #################################################
-# #
-# End of program #
-# #
+#                                               #
+#               End of program                  #
+#                                               #
 #################################################

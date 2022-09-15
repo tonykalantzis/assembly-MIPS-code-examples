@@ -3,7 +3,6 @@
 #     	 	data segment						#
 #												#
 #################################################
-
 	.data
 prompt: .asciiz "Enter integer number: "
 endl: .asciiz "\n"

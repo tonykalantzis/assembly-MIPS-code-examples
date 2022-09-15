@@ -19,9 +19,9 @@ word2:   .word 0x87654321
 
 	.text
 	.globl __start	
-												#read first int and move it to a temp reg
+			#read first int and move it to a temp reg#
 __start:
-    lb $t0, byte1 + 3  ################################################
+    lb $t0, byte1 + 3  ####################################################
     lb $t1, byte1 + 2
     lb $t2, byte1 + 1
     lb $t3, byte1

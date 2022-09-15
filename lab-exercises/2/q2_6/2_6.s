@@ -68,7 +68,6 @@ __start:
 
     sw $s0, sum + 0
     sw $s1, sum + 4
-1
 	
 	j Exit
 

@@ -70,7 +70,7 @@ max: .asciiz "Max is : "
 min: .asciiz "Min is : "
 endl: .asciiz "\n"
 #################################################
-# #
-# End of program #
-# #
+#                                               #
+#               End of program                  #
+#                                               #
 #################################################

@@ -5,10 +5,7 @@
 #################################################
 
 	.data
-    .align 0
-bytes:  .byte 0x01,0x02,0x03,0x04,0x05,0x81,0x082,0x83,0x84
-half:   .half 0x6677
-words:  .word 0x12345678 , 0x87654321
+endl: 	.asciiz 	"\n"
 #################################################
 #												#
 #				  text segment					#
@@ -18,21 +15,39 @@ words:  .word 0x12345678 , 0x87654321
 	.globl __start	
 __start:
 #-------------start of main program-------------#
-    #la $s0, bytes
-    #lw $t0, 12($s0)
-    
-    #la $s0, half
-    #lh $t1, 0($s0)
+#s0->byte0,s1->byte 1,s2->byte2, s3->byte3
+	#apotelesma ->s4
+	li $a0, 0x12345678
 
-    la $s0, bytes 
-    ulh $t1, 9($s0)
-    ulw $t2, 13($s0)
-exit:   li 	$v0, 10
-		syscall				#au revoir...
+	srl $s0, $a0,24
+
+	sll $s3, $a0, 24
+
+	#1st case with shift
+	#2nd case with mask
+	andi $s2,$a0, 0xff00
+	sll $s2,$s2, 8
+
+	li $t0,0xff0000
+	and $s1,$a0,$t0
+	sll $s1,$s1,8
+
+	or $s4, $s0, $s1
+	or $s4, $s4, $s2
+	or $s4,$s4,$s3
+	
+	li $v0, 0xa   # 10
+	syscall 		# au revoir...
+	
+
+Exit:   		li 	$v0, 10
+				syscall				#au revoir...
 #-------------end of main program--------------#
 
 #-------------start of procedures--------------#
-
+print_endl:			la	$a0,endl 			 
+					li	$v0, 4 	#system call to print
+					syscall
+					jr $ra
 
 #-------------end of procedures---------------#
-

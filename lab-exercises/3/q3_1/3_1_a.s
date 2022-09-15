@@ -6,6 +6,7 @@
 
 	.data
 endl: 					.asciiz 	"\n"
+enter: .asciiz "Enter an integer:\n"
 msg1: .asciiz "\nIs divided with 2.\n"
 msg2: .asciiz "\nIs divided with 3.\n"
 msg3: .asciiz "\nIs divided with 5.\n"
@@ -20,6 +21,10 @@ msg4: .asciiz "\nIs not divided with 2, 3 or 5.\n"
 	.globl __start	
 												#read first int and move it to a temp reg
 __start:
+	li $v0, 4
+	la $a0, enter	# display "enter an integer:"
+	syscall
+
 	j read_int
     li $t9 , 0
     li $t8 , 0

@@ -84,7 +84,7 @@ __start:
                 addi $sp, $sp, 4
                 jr $ra
 
-# end of procedur
+# end of procedure
 
 Exit:				li 		$v0, 10
 					syscall				#au revoir...
