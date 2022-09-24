@@ -18,11 +18,4 @@
 |read|14|$a0 = file descriptor, $a1 = buffer, $a2 = length|num chars read (in $v0)|
 |write|15|$a0 = file descriptor, $a1 = buffer, $a2 = length|num chars written (in $v0)| 
 |close|16|$a0 = file descriptor| | 
-|exit2|17|$a0 = result| 
-  
-
-
-
-
-
-
+|exit2|17|$a0 = result| |
