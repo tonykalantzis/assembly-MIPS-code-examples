@@ -90,8 +90,6 @@ __start:
 
 						j Exit
 						
-	
-
 
 Exit:				li 		$v0, 10
 					syscall				#au revoir...
