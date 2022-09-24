@@ -1,4 +1,4 @@
-# Exam of June 2022 
+# Exam
 ### Description for each exercise
 
 - **CommonCharsin2Strings.s**
