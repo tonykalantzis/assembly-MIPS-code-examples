@@ -1,4 +1,4 @@
-#System Calls
+# System Calls
 
 |Service|System Call codes|Arguments|Results|
 |:---|:---:|:---:|---:|
