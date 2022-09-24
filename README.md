@@ -19,7 +19,7 @@ The code for all the exercises we completed in the lab.
 ## exams 
 All the exam material of our and previous years solved.
 
-## *useful-code*
+## useful-code
 Some useful TOOLS and code as template and ready to use functions. These files, practically used as a library, provided a tool-box that allowed as to focus on higher-level problems, rather than writing evey lin eby hand
 
 # Contribution - Efi Papafili 
