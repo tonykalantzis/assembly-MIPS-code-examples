@@ -15,7 +15,7 @@ endl: .asciiz "\n"
 	.text
 	.globl __start									
 __start:
-# start of main program
+#-------------------------start of main program-----------------------------------------
  la $a0,prompt
  li $v0,4
  syscall # display "Enter integer number :"
@@ -31,8 +31,11 @@ __start:
  
  li $v0,10
  syscall # exit
-# end of main program
-# start of procedure
+#------------------------ end of main program--------------------
+
+
+
+#------------------------- start of procedure--------------------
 rec:
 	addi $sp, -4
 	sw $ra, 0($sp)
@@ -51,14 +54,14 @@ rec:
 	
 	l1:
 		addi $a0, -1
-		jal rec
+		jal rec #recursion
 	
-	end:
-		lw $ra, 0($sp)
+	end:  #base case 
+		lw $ra, 0($sp) 
 		addi $sp, 4
 		jr $ra
 		
-# end of procedure
+#------------------------- end of procedure------------------------
 
 print_endl:	la	$a0,endl 			# system call to print
 				li	$v0, 4 				# out a newline

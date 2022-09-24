@@ -6,10 +6,10 @@
 
 	.data
 endl: 	.asciiz 	"\n"
-zer_f:  .float 0.0
-m_inf:  .word 0xff800000
-p_inf:  .word 0x7f800000
-nan:    .word 0x7fffffff
+zer_f:  .float 0.0 
+m_inf:  .word 0xff800000 #-infinite
+p_inf:  .word 0x7f800000 #+infinite 
+nan:    .word 0x7fffffff #+NaN
 x:      .float   55.0
 y:      .float  -55.0 
 
